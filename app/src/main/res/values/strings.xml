@@ -10,4 +10,23 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="password">Password</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_have_an_account">Already have an account ? :</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_the_new_password_below">Enter the new password below</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="enter_your_registered_email_id_to_reset_the_password">Enter Your Registered Email ID to reset the password</string>
 </resources>

@@ -13,17 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
+        android:drawableStart="@drawable/ic_security"
         android:ems="10"
-        android:hint="Re-Enter Password"
+        android:hint="@string/re_enter_password"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/input_password"
         app:layout_constraintStart_toStartOf="@+id/input_password"
-        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/Heading_Register"
@@ -34,9 +36,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <EditText
         android:id="@+id/input_firstName"
@@ -46,17 +49,19 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_person"
+        android:drawableStart="@drawable/ic_person"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:inputType="textPersonName"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Heading_Register" />
+        app:layout_constraintTop_toBottomOf="@+id/Heading_Register"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/input_lastName"
@@ -64,17 +69,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_person"
+        android:drawableStart="@drawable/ic_person"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:inputType="textPersonName"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/input_firstName"
         app:layout_constraintStart_toStartOf="@+id/input_firstName"
-        app:layout_constraintTop_toBottomOf="@+id/input_firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/input_firstName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/input_Email"
@@ -82,17 +89,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_mail"
+        android:drawableStart="@drawable/ic_mail"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/input_lastName"
         app:layout_constraintStart_toStartOf="@+id/input_lastName"
-        app:layout_constraintTop_toBottomOf="@+id/input_lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/input_lastName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/input_phoneNo"
@@ -100,17 +109,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_phone"
+        android:drawableStart="@drawable/ic_phone"
         android:ems="10"
-        android:hint="Phone Number"
+        android:hint="@string/phone_number"
         android:inputType="phone"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/input_Email"
         app:layout_constraintStart_toStartOf="@+id/input_Email"
-        app:layout_constraintTop_toBottomOf="@+id/input_Email" />
+        app:layout_constraintTop_toBottomOf="@+id/input_Email"
+        android:autofillHints="" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegister"
@@ -120,7 +131,7 @@
         android:background="@drawable/btn_bg"
         android:backgroundTint="@color/yellow"
         android:shadowColor="@color/teal_700"
-        android:text="Register"
+        android:text="@string/register"
         app:layout_constraintEnd_toEndOf="@+id/input_password2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/input_password2"
@@ -133,7 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Already have an account ? :"
+        android:text="@string/already_have_an_account"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
@@ -144,8 +155,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Sign In"
-        android:textColor="@color/blue"
+        android:text="@string/sign_in"
+        android:textColor="#1976D2"
         android:textColorLink="@color/blue"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
         app:layout_constraintHorizontal_bias="0.813"
@@ -158,16 +169,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
+        android:drawableStart="@drawable/ic_security"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/input_phoneNo"
         app:layout_constraintStart_toStartOf="@+id/input_phoneNo"
-        app:layout_constraintTop_toBottomOf="@+id/input_phoneNo" />
+        app:layout_constraintTop_toBottomOf="@+id/input_phoneNo"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

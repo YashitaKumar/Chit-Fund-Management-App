@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1057810751226",
+    "project_id": "chitfund-e12c9",
+    "storage_bucket": "chitfund-e12c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057810751226:android:ad45a119955031ab68b343",
+        "android_client_info": {
+          "package_name": "com.example.chitfund"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057810751226-gpg9bdqta8bt1e8paa3b4havm15n5s8q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chitfund",
+            "certificate_hash": "0abc7905a2026a6911987a4eca8c6702abcc204e"
+          }
+        },
+        {
+          "client_id": "1057810751226-87egfrv2pj2smbu8mqbq6qigbatc1fgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAq0nrQSRBf_UwYdJtloqq7T7lVLtDrUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057810751226-87egfrv2pj2smbu8mqbq6qigbatc1fgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

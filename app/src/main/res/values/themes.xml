@@ -22,4 +22,11 @@
     <style name="Theme.ChitFund.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ChitFund.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="background">
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+    </style>
 </resources>

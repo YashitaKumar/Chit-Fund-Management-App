@@ -4,19 +4,28 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ChitFund/app/src/main/res/drawable/btn_bg.xml" value="0.19722222222222222" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_crud.xml" value="0.20185185185185187" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_invoice.xml" value="0.20185185185185187" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_list.xml" value="0.20185185185185187" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_logout.xml" value="0.20185185185185187" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_mail.xml" value="0.19722222222222222" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_maths.xml" value="0.20185185185185187" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_payment.xml" value="0.20185185185185187" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_person.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_phone.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_security.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/input_bg.xml" value="0.20052083333333334" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login.xml" value="0.15353260869565216" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login_activity.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_password.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/content_login.xml" value="0.15353260869565216" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_second.xml" value="0.15353260869565216" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/item_image.xml" value="0.25" />
       </map>
     </option>
   </component>

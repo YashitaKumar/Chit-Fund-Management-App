@@ -3,13 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/btn_bg.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_crud.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_google_background.xml" value="0.2465" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_invoice.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_list.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_logout.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_mail.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_maths.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_payment.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_person.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_phone.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_security.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/input_bg.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_home.xml" value="0.2359375" />
-        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_login_activity.xml" value="0.264" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_login_activity.xml" value="0.4" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_user_registration.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/item_image.xml" value="0.13177083333333334" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/rough.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_google.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_google_round.xml" value="0.2465" />
@@ -30,6 +46,7 @@
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

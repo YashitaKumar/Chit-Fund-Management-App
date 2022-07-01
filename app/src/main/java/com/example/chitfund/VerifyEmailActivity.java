@@ -1,10 +1,14 @@
 package com.example.chitfund;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
+=======
+>>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -22,12 +26,19 @@ public class VerifyEmailActivity extends AppCompatActivity{
 
     private EditText verifyEmailID;
     private FirebaseAuth mAuth;
+=======
+import android.view.View;
+import android.widget.Button;
+
+public class VerifyEmailActivity extends AppCompatActivity {
+>>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_email);
         Button btn = findViewById(R.id.btn_resetPassword);
+<<<<<<< HEAD
         verifyEmailID = findViewById(R.id.verify_email);
         mAuth= FirebaseAuth.getInstance();
         btn.setOnClickListener(new View.OnClickListener() {
@@ -70,4 +81,13 @@ public class VerifyEmailActivity extends AppCompatActivity{
 
     }
 
+=======
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(VerifyEmailActivity.this, ResetPasswordActivity.class));
+            }
+        });
+    }
+>>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 }

@@ -30,4 +30,13 @@
     <string name="re_set_password">Re-Set Password</string>
     <string name="forgot_Password_heading">Forgot Password</string>
     <string name="google">google</string>
+    <string name="enter_the_new_password_below">Enter the new password below</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="chit_fund_management_system">CHIT FUND MANAGEMENT SYSTEM</string>
+    <string name="crud">CRUD</string>
+    <string name="maths">MATHS</string>
+    <string name="lists">LISTS</string>
+    <string name="logout">LOGOUT</string>
+    <string name="payments">PAYMENTS</string>
 </resources>

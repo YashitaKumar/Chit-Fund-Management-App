@@ -60,10 +60,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_resetPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="346dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_bg"
+        android:gravity="center"
         android:text="@string/re_set_password"
         app:layout_constraintEnd_toEndOf="@+id/verify_email"
         app:layout_constraintHorizontal_bias="0.0"

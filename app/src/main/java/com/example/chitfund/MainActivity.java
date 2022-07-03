@@ -1,14 +1,10 @@
 package com.example.chitfund;
 
-<<<<<<< HEAD
 import androidx.annotation.NonNull;
-=======
->>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -23,6 +19,7 @@ import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.Identity;
 import com.google.android.gms.auth.api.identity.SignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,19 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SignInClient oneTapClient;
     private BeginSignInRequest signInRequest;
 
-    String enterHomeActivity="true";
-=======
-import android.view.View;
-import android.widget.TextView;
-
-public class MainActivity extends AppCompatActivity {
->>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
 //        oneTapClient = Identity.getSignInClient(this);
 //        signInRequest = BeginSignInRequest.builder()
 //                .setPasswordRequestOptions(BeginSignInRequest.PasswordRequestOptions.builder()
@@ -104,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user=mAuth.getCurrentUser();
         if(user != null && user.isEmailVerified()){
-            startActivity(new Intent(this,HomeActivity.class));
+            startActivity(new Intent(this,DashboardActivity.class));
         }
     }
 
@@ -133,14 +122,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         progressBar.setVisibility(View.VISIBLE);
-        mAuth.signInWithEmailAndPassword(emailId,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(emailId,password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     progressBar.setVisibility(View.GONE);
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()){
-                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                        startActivity(new Intent(MainActivity.this, DashboardActivity.class));
                         Toast.makeText(MainActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
                     }
                     else {
@@ -175,14 +165,4 @@ public class MainActivity extends AppCompatActivity {
 
        }
     }
-=======
-        TextView btn = findViewById(R.id.btn_SignIn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
-    }
->>>>>>> e5fc174a323c6ab2356b649aff96329c493f6fa3
 }

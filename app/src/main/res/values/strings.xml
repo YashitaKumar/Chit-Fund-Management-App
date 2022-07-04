@@ -39,4 +39,9 @@
     <string name="lists">LISTS</string>
     <string name="logout">LOGOUT</string>
     <string name="payments">PAYMENTS</string>
+    <string name="close">Close</string>
+    <string name="change_profile">Change Profile</string>
+    <string name="save">Save</string>
+    <string name="todo">TODO</string>
+    <string name="change_Profile_Picture">Change Profile</string>
 </resources>

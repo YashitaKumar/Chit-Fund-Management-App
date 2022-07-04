@@ -57,11 +57,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_crud"/>
+                        android:src="@drawable/ic_edit"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CRUD"
+                        android:text="EDIT DETAILS"
                         android:textStyle="bold"
                         android:textSize="15sp"
                         android:textAlignment="center"/>

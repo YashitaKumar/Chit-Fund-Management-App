@@ -13,10 +13,10 @@
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".ResetPasswordActivity"
+            android:name=".UserRegistration"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".VerifyEmailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

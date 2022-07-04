@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "998375958889",
+    "firebase_url": "https://chitfunds-c4823-default-rtdb.firebaseio.com",
+    "project_id": "chitfunds-c4823",
+    "storage_bucket": "chitfunds-c4823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998375958889:android:a6cf6ca7b1344bbaaf35f8",
+        "android_client_info": {
+          "package_name": "com.example.chitfund"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998375958889-hec9ikjokcobsqh9hvnq6in21vfrd1ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtxVyFV7s4JKfiXmjBPCi_WQl9TjVbb_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998375958889-hec9ikjokcobsqh9hvnq6in21vfrd1ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

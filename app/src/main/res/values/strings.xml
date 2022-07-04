@@ -10,4 +10,33 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="already_have_an_account">Already have an account ? :</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_out">Log out</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="enter_your_registered_email_id_to_reset_the_password">Enter Your Registered Email ID to reset the password</string>
+    <string name="re_set_password">Re-Set Password</string>
+    <string name="forgot_Password_heading">Forgot Password</string>
+    <string name="google">google</string>
+    <string name="enter_the_new_password_below">Enter the new password below</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="chit_fund_management_system">CHIT FUND MANAGEMENT SYSTEM</string>
+    <string name="crud">CRUD</string>
+    <string name="maths">MATHS</string>
+    <string name="lists">LISTS</string>
+    <string name="logout">LOGOUT</string>
+    <string name="payments">PAYMENTS</string>
 </resources>

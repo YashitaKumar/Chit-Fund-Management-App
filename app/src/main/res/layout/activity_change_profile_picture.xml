@@ -4,15 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChangeProfilePicture">
+    tools:context=".ChangeProfile">
 
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:drawableEnd="@drawable/ic_phone"
+        android:ems="10"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextLName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLName" />
+
+    <EditText
+        android:id="@+id/editTextLName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:drawableEnd="@drawable/ic_person"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextFName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFName" />
+
+    <EditText
+        android:id="@+id/editTextFName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:drawableEnd="@drawable/ic_person"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageViewProfilePicture" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/shapeableImageViewProfilePicture"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="44dp"
         android:elevation="15dp"
         android:padding="5dp"
         android:src="@drawable/person"
@@ -36,13 +95,11 @@
         android:id="@+id/buttonChange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/change_profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.74"
-        app:layout_constraintStart_toEndOf="@+id/shapeableImageViewProfilePicture"
-        app:layout_constraintTop_toBottomOf="@+id/shapeableImageViewProfilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

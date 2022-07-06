@@ -21,9 +21,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="32dp"
+        android:contentDescription="@string/todo"
         app:backgroundTint="@color/primaryColor"
         app:borderWidth="0dp"
         app:srcCompat="@drawable/plus"
-        app:tint="@color/modeColor" />
+        app:tint="@color/modeColor"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

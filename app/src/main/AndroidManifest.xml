@@ -13,7 +13,7 @@
             android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".ChangeProfilePicture"
+            android:name=".ChangeProfile"
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"

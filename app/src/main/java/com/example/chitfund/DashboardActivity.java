@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,11 +38,15 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private TextView UserName;
     private TextView UserId;
 
+
     private ShapeableImageView shapeableImageViewProfileImage;
+
+    public static String fName,lName,phoneNo,emailId;
 
     private FirebaseAuth mAuth;
     private StorageReference storageReference;
     private StorageReference profileReference;
+
 
     private String userID;
 
@@ -53,6 +58,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         ChangeProfileImage = findViewById(R.id.CRUD);
         shapeableImageViewProfileImage = findViewById(R.id.shapeableImageViewProfileImage);
+
 
         PhoneNumber = findViewById(R.id.TextViewUserPhoneNumber);
         EmailId = findViewById(R.id.TextViewUserEmailId);
@@ -78,7 +84,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         });
 
 
-        String emailId= mAuth.getCurrentUser().getEmail().toString().trim();
+        emailId= mAuth.getCurrentUser().getEmail().toString().trim();
         EmailId.setText("Email ID: "+ emailId);
         UserId.setText("UID: "+ mAuth.getCurrentUser().getUid().toString().trim());
 
@@ -87,7 +93,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         Log.v("USERID",userRef.getKey());
 
         userRef.addValueEventListener(new ValueEventListener() {
-            String fName,lName,phoneNo,emailID;
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot keyId: snapshot.getChildren()) {
@@ -100,7 +105,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 }
                 UserName.setText(fName+" "+lName);
                 PhoneNumber.setText("Phone No.: "+phoneNo);
-
             }
 
             @Override
@@ -110,7 +114,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             }
         });
 
-
         LogoutButton.setOnClickListener(this);
         ChangeProfileImage.setOnClickListener(this);
     }
@@ -118,6 +121,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private void UserLogOut() {
         mAuth.signOut();
         finish();
+    }
+    private void changeProfile(){
+       startActivity(new Intent(this, ChangeProfile.class));
     }
 
     @Override
@@ -127,7 +133,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 UserLogOut();
                 break;
             case (R.id.CRUD):
-                startActivity(new Intent(this,ChangeProfilePicture.class));
+                changeProfile();
                 break;
         }
     }

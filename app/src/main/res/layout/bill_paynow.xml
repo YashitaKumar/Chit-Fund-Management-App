@@ -53,14 +53,13 @@
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:translationX="-50dp"
-            app:srcCompat="@drawable/rsicon" />
+            app:srcCompat="@drawable/indian_rupee" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:backgroundTint="@android:color/holo_red_light"
             android:text="Pay Now" />
 
     </androidx.cardview.widget.CardView>

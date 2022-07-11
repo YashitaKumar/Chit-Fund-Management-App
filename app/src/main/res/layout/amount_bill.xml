@@ -7,19 +7,20 @@
     android:layout_marginStart="10dp"
     android:layout_marginTop="12dp">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Rs"
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/indian_rupee"
         android:textColor="#0B0909" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="236dp"
+        android:layout_height="match_parent"
         android:text="Amount"
         android:textColor="#0B0909"
+        android:paddingStart="5dp"
         android:translationX="10dp" />
 
-
+</com.google.android.material.card.MaterialCardView>

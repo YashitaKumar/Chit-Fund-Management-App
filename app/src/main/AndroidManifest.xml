@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChitFund">
         <activity
+            android:name=".verifyPhoneNumberActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity
@@ -17,6 +20,9 @@
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BillPayNowActivity"
             android:exported="false" />
         <activity
             android:name=".UserRegistration"

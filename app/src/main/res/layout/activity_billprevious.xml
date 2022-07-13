@@ -59,6 +59,7 @@
         android:translationX="25dp"
         android:translationY="135dp"/>
 
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -66,8 +67,7 @@
         android:text="@string/total_amount_in_fund"
         android:textColor="#0B0909"
         android:translationX="25dp"
-        android:translationY="165dp"/>
-
+        android:translationY="165dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/amountcount"

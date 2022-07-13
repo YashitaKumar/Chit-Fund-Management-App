@@ -32,7 +32,8 @@ import com.squareup.picasso.Picasso;
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener{
 
     private CardView LogoutButton;
-    private CardView ChangeProfileImage;
+    private CardView ChangeProfile;
+    private CardView paymentPage;
     private TextView PhoneNumber;
     private TextView EmailId;
     private TextView UserName;
@@ -56,9 +57,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        ChangeProfileImage = findViewById(R.id.CRUD);
+        ChangeProfile = findViewById(R.id.ImageViewUserProfilePic);
         shapeableImageViewProfileImage = findViewById(R.id.shapeableImageViewProfileImage);
-
+        paymentPage = findViewById(R.id.payments);
 
         PhoneNumber = findViewById(R.id.TextViewUserPhoneNumber);
         EmailId = findViewById(R.id.TextViewUserEmailId);
@@ -96,6 +97,13 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot keyId: snapshot.getChildren()) {
+//                    if(fName==null || phoneNo==null){
+//                        fName = mAuth.getCurrentUser().getDisplayName();
+//                        String parts[]= fName.split("\\s+");
+//                        fName = parts[0];
+//                        lName = parts[1];
+//                        phoneNo = mAuth.getCurrentUser().getPhoneNumber();
+//                    }
                     if (keyId.child("emailId").getValue().equals(emailId)) {
                         fName = keyId.child("fName").getValue(String.class);
                         lName = keyId.child("lName").getValue(String.class);
@@ -103,10 +111,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                         break;
                     }
                 }
+
                 UserName.setText(fName+" "+lName);
                 PhoneNumber.setText("Phone No.: "+phoneNo);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 //Failed to read values
@@ -115,7 +123,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         });
 
         LogoutButton.setOnClickListener(this);
-        ChangeProfileImage.setOnClickListener(this);
+        ChangeProfile.setOnClickListener(this);
+        paymentPage.setOnClickListener(this);
     }
 
     private void UserLogOut() {
@@ -126,14 +135,18 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
        startActivity(new Intent(this, ChangeProfile.class));
     }
 
+    private void paymentPage(){ startActivity(new Intent(this, BillPayNowActivity.class));}
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case (R.id.Logout):
                 UserLogOut();
                 break;
-            case (R.id.CRUD):
+            case (R.id.ImageViewUserProfilePic):
                 changeProfile();
+                break;
+            case(R.id.payments):
+                paymentPage();
                 break;
         }
     }

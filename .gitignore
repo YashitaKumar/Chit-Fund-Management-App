@@ -14,7 +14,7 @@
 .externalNativeBuild
 .cxx
 local.properties
-daemon/7.3.3/*
+daemon/7.3.3/*.out.log
 daemon/7.3.3/registry.bin
 daemon/7.3.3/registry.bin.lock
 caches/*

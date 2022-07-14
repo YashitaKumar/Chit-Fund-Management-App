@@ -88,6 +88,10 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
             inputPhoneNumber.requestFocus();
             return;
         }
+        if(!Patterns.PHONE.matcher(phoneNumber).matches()){
+            inputPhoneNumber.setError("Enter valid phone number");
+            inputPhoneNumber.requestFocus();
+        }
         if(TextUtils.isEmpty(emailId)){
             inputEmailID.setError("Enter Email Id");
             inputEmailID.requestFocus();

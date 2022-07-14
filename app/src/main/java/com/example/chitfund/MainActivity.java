@@ -50,6 +50,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final int RC_SIGN_IN = 143;
+    public static String phoneNumber = "123";
     private EditText input_emailId;
     private EditText input_password;
 
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView btn_signUp;
     private TextView btn_forgotPassword;
     private SignInButton signInButton;
-
 
     private ProgressBar progressBar;
 
@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this,DashboardActivity.class));
         }
     }
-
 
     public void SignIn(){
         String emailId=input_emailId.getText().toString().trim();
@@ -182,16 +181,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser fUser = mAuth.getCurrentUser();
                             String fullName = fUser.getDisplayName();
-                            String[] parts = fullName.split("//s+");
-                            if(fUser.getPhoneNumber()==null){
-                                startActivity(new Intent(MainActivity.this, verifyPhoneNumberActivity.class));
-                            }
-                            User user = new User(parts[0], parts[1],fUser.getPhoneNumber(),fUser.getEmail());
+                            String[] parts = fullName.split("\\s+");
+                            User user = new User(parts[0], parts[1],phoneNumber,fUser.getEmail());
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Log.d("SignInActivity", "signInWithCredential:success");
-                                    startActivity(new Intent(MainActivity.this,DashboardActivity.class));
+                                    startActivity(new Intent(MainActivity.this,verifyPhoneNumberActivity.class));
+                                    finish();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -200,7 +197,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     Log.w("SignInActivity", "SignUpWithGoogle:failure");
                                 }
                             });
-
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("SignInActivity", "signInWithCredential:failure", task.getException());

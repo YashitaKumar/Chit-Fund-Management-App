@@ -15,12 +15,17 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class verifyPhoneNumberActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editTextPhoneNumber;
     private Button buttonSubmit;
+
+    private DatabaseReference fDatabase;
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,25 +34,32 @@ public class verifyPhoneNumberActivity extends AppCompatActivity implements View
         editTextPhoneNumber = findViewById(R.id.editTextPhone);
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
+        mAuth = FirebaseAuth.getInstance();
+        fDatabase = FirebaseDatabase.getInstance().getReference("Users/"+mAuth.getCurrentUser().getUid());
+
         buttonSubmit.setOnClickListener(this);
     }
 
     private void verifyPhoneNumber(){
         String stringPhoneNumber= editTextPhoneNumber.getText().toString().trim();
         if(Patterns.PHONE.matcher(stringPhoneNumber).matches()){
-            FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("phoneNumber").setValue(stringPhoneNumber).addOnSuccessListener(new OnSuccessListener<Void>() {
+            fDatabase.child("phoneNumber").setValue(stringPhoneNumber).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                    Log.d("PhoneNumberVerification","PhoneNumberVerification:Success");
+                    startActivity(new Intent(verifyPhoneNumberActivity.this, DashboardActivity.class));
                     finish();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     Toast.makeText(verifyPhoneNumberActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    Log.w("PhoneNumberVerification", "PhoneNumberVerification:Failure");
                 }
             });
+            finish();
+        }
+        else{
+            editTextPhoneNumber.setError("Please enter valid phone Number");
+            editTextPhoneNumber.requestFocus();
         }
     }
 

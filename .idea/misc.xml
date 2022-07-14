@@ -32,21 +32,17 @@
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2465" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/btn_bg.xml" value="0.19722222222222222" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_crud.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_mail.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_person.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_phone.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_security.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/input_bg.xml" value="0.20052083333333334" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_customer.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.10869565217391304" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login.xml" value="0.15353260869565216" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_password.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/content_login.xml" value="0.15353260869565216" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/customer_item.xml" value="0.33" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_second.xml" value="0.15353260869565216" />
       </map>

@@ -48,7 +48,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private StorageReference storageReference;
     private StorageReference profileReference;
 
-
     private String userID;
 
     @SuppressLint("SetTextI18n")
@@ -70,21 +69,14 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         mAuth = FirebaseAuth.getInstance();
 
-        storageReference = FirebaseStorage.getInstance().getReference();
-        profileReference = storageReference.child("Users/"+mAuth.getCurrentUser().getUid()+"/profile.jpg");
-        profileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).into(shapeableImageViewProfileImage);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(DashboardActivity.this, "Failed to load the profile picture!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        getProfilePicture();
+        getProfileInfo();
 
-
+        LogoutButton.setOnClickListener(this);
+        ChangeProfile.setOnClickListener(this);
+        paymentPage.setOnClickListener(this);
+    }
+    public void getProfileInfo(){
         emailId= mAuth.getCurrentUser().getEmail().toString().trim();
         EmailId.setText("Email ID: "+ emailId);
         UserId.setText("UID: "+ mAuth.getCurrentUser().getUid().toString().trim());
@@ -97,13 +89,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot keyId: snapshot.getChildren()) {
-//                    if(fName==null || phoneNo==null){
-//                        fName = mAuth.getCurrentUser().getDisplayName();
-//                        String parts[]= fName.split("\\s+");
-//                        fName = parts[0];
-//                        lName = parts[1];
-//                        phoneNo = mAuth.getCurrentUser().getPhoneNumber();
-//                    }
                     if (keyId.child("emailId").getValue().equals(emailId)) {
                         fName = keyId.child("fName").getValue(String.class);
                         lName = keyId.child("lName").getValue(String.class);
@@ -121,20 +106,30 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 Log.w("UserRef", "Failed to read User Values ",error.toException() );
             }
         });
-
-        LogoutButton.setOnClickListener(this);
-        ChangeProfile.setOnClickListener(this);
-        paymentPage.setOnClickListener(this);
     }
-
+    public void getProfilePicture(){
+        storageReference = FirebaseStorage.getInstance().getReference();
+        profileReference = storageReference.child("Users/"+mAuth.getCurrentUser().getUid()+"/profile.jpg");
+        profileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(shapeableImageViewProfileImage);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(DashboardActivity.this, "Failed to load the profile picture!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     private void UserLogOut() {
         mAuth.signOut();
+        startActivity(new Intent(this,MainActivity.class));
         finish();
     }
     private void changeProfile(){
        startActivity(new Intent(this, ChangeProfile.class));
     }
-
     private void paymentPage(){ startActivity(new Intent(this, BillPayNowActivity.class));}
     @Override
     public void onClick(View view) {

@@ -1,5 +1,6 @@
 package com.example.chitfund;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -130,6 +131,10 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
             inputPhoneNumber.requestFocus();
             return;
         }
+        if(!Patterns.PHONE.matcher(phoneNumber).matches()){
+            inputPhoneNumber.setError("Enter valid phone number");
+            inputPhoneNumber.requestFocus();
+        }
         if(TextUtils.isEmpty(emailId)){
             inputEmailID.setError("Enter Email Id");
             inputEmailID.requestFocus();
@@ -173,6 +178,7 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
                             if (task.isSuccessful()){
                                 Toast.makeText(UserRegistration.this, "User is registered successfully", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
+                                startActivity(new Intent(UserRegistration.this,MainActivity.class));
                                 finish();
                             }
                             else{

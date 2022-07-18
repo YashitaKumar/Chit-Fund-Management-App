@@ -5,7 +5,7 @@
     android:id="@+id/Bill_plan"
     android:layout_width="370dp"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
+    android:layout_marginStart="20dp"
     android:layout_marginTop="10dp"
     android:orientation="vertical">
 
@@ -25,42 +25,45 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bill Statement for"
+            android:text="@string/bill_statement_for"
             android:textColor="#0B0909"
             android:textStyle="normal"
             android:translationX="70dp"
             android:translationY="20dp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textViewDateFromTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date from - to"
+            android:text="@string/date_from_to"
             android:textColor="#0B0808"
             android:translationX="185dp"
             android:translationY="20dp" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textViewAmountDue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Amount Due" />
+            android:text="@string/amount_due" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/todo"
             android:translationX="-50dp"
             app:srcCompat="@drawable/indian_rupee" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonPayNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:text="Pay Now" />
+            android:backgroundTint="@color/yellow"
+            android:text="@string/pay_now"
+            android:textColor="#000000" />
 
     </androidx.cardview.widget.CardView>
 
@@ -71,7 +74,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="470dp"
             tools:listitem="@layout/activity_billprevious" />
     </androidx.cardview.widget.CardView>
 

@@ -50,4 +50,12 @@
     <string name="previous_balance">Previous Balance</string>
     <string name="previous_payments">Previous Payments</string>
     <string name="taxes">Taxes</string>
+    <string name="bill_statement_for">Bill Statement for</string>
+    <string name="date_from_to">Date from - to</string>
+    <string name="amount_due">Amount Due</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="amount">Amount</string>
+    <string name="title_activity_list_of_chits">ListOfChitsActivity</string>
+    <string name="submit">Submit</string>
+    <string name="enter_the_full_valid_phone_number">Enter the full valid phone number</string>
 </resources>

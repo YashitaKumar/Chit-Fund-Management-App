@@ -41,6 +41,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
@@ -49,6 +54,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final int RC_SIGN_IN = 143;
+    public static String phoneNumber = "123";
     private EditText input_emailId;
     private EditText input_password;
 
@@ -61,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView text;
     private SignInButton signInButton;
 
-
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    private DatabaseReference fDatabase;
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -91,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
 
         mAuth = FirebaseAuth.getInstance();
+        fDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
         btn_signUp.setOnClickListener(this);
         btn_signIn.setOnClickListener(this);
@@ -133,9 +140,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FirebaseUser user=mAuth.getCurrentUser();
         if(user != null && user.isEmailVerified()){
             startActivity(new Intent(this,DashboardActivity.class));
+            finish();
         }
     }
-
 
     public void SignIn(){
         String emailId=input_emailId.getText().toString().trim();
@@ -172,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (user.isEmailVerified()){
                         startActivity(new Intent(MainActivity.this, DashboardActivity.class));
                         Toast.makeText(MainActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                     else {
                         user.sendEmailVerification();
@@ -215,8 +223,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("SignInActivity", "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                               DatabaseReference userPhoneNumberRef=fDatabase.child(mAuth.getCurrentUser().getUid());
+                               Log.d("SignInActivity", userPhoneNumberRef.getKey());
+//                               userPhoneNumberRef.addValueEventListener(new ValueEventListener() {
+//                                   @Override
+//                                   public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                       phoneNumber = snapshot.getValue(String.class);
+//                                       Log.d("PhoneNumberRetrieval",phoneNumber);
+//                                   }
+//                                   @Override
+//                                   public void onCancelled(@NonNull DatabaseError error) {
+//                                       Log.w("PhoneNumberRetrieval", "onCancelled: h" );
+//                                   }
+//                               });
+                            userPhoneNumberRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    for(DataSnapshot data: snapshot.getChildren()){
+                                        Boolean truth = data.child("phoneNumber").exists();
+                                        if (data.getKey().equals("phoneNumber")) {
+                                            phoneNumber = data.getValue(String.class);
+                                            if(!phoneNumber.equals("123")){
+                                                startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+                                                finish();
+                                                return;
+                                            }
+                                            Log.d("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
+                                        } else {
+                                            Log.w("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
+                                        }
+                                    }
+                                    Log.d("PhoneNumberThing",phoneNumber);
+                                    FirebaseUser fUser = mAuth.getCurrentUser();
+                                    String fullName = fUser.getDisplayName();
+                                    String[] parts = fullName.split("\\s+");
+                                    User user = new User(parts[0], parts[1], phoneNumber, fUser.getEmail());
+                                    FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Log.d("SignInActivity", "signInWithCredential:success");
+                                            startActivity(new Intent(MainActivity.this, verifyPhoneNumberActivity.class));
+                                            finish();
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                            Log.w("SignInActivity", "SignUpWithGoogle:failure");
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+                                    Log.w("PhoneNumberThing", "Something went wrong!");
+                                }
+                            });
+                            Log.d("PhoneNumberThing",phoneNumber);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("SignInActivity", "signInWithCredential:failure", task.getException());
@@ -233,6 +296,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                break;
            case (R.id.btn_SignUp):
                startActivity(new Intent(this,UserRegistration.class));
+               finish();
                break;
            case (R.id.btnLogin):
                SignIn();

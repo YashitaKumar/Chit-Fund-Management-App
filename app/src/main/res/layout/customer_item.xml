@@ -4,8 +4,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="6dp"
-    android:elevation="6dp"
+    app:cardCornerRadius="20dp"
+    android:elevation="10dp"
+    android:layout_margin="5dp"
     app:cardUseCompatPadding="true">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,13 +14,12 @@
         android:padding="15dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
-            android:layout_centerVertical="true"
-            android:id="@+id/img1"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
             android:id="@+id/fnametext"
             android:text="FName"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="30dp"/>
@@ -37,7 +37,7 @@
             android:id="@+id/lnametext"
             android:text="LName"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@+id/fnametext"
             android:layout_marginLeft="10dp"/>
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/emailtext"
             android:text="Email"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@+id/img1"
             android:layout_below="@+id/fnametext"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/mobiletext"
             android:text="Mobile Number"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@+id/img1"
             android:layout_below="@+id/emailtext"
@@ -66,11 +66,38 @@
             android:layout_height="wrap_content"
             android:id="@+id/slabtext"
             android:text="Slab Amount"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@+id/img1"
             android:layout_below="@+id/mobiletext"
             android:layout_marginLeft="30dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/slabtext"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="EDIT"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnEdit"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="DELETE"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btnDelete"/>
+
+        </LinearLayout>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

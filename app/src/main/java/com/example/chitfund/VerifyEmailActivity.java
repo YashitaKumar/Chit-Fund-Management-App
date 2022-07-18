@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,8 +21,13 @@ public class VerifyEmailActivity extends AppCompatActivity{
 
 //    public static final String EXTRA_NAME = "com.example.chitfund.extra.NAME";
 
+    private TextView heading;
+    private TextView textView;
+    private Button button;
     private EditText verifyEmailID;
     private FirebaseAuth mAuth;
+
+    float v=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,26 @@ public class VerifyEmailActivity extends AppCompatActivity{
                 resetEmail();
             }
         });
+
+        //Animation
+        heading = findViewById(R.id.Heading_Register);
+        textView = findViewById(R.id.textView3);
+        button = findViewById(R.id.btn_resetPassword);
+
+        heading.setTranslationY(300);
+        textView.setTranslationY(300);
+        button.setTranslationX(800);
+        verifyEmailID.setTranslationX(800);
+
+        heading.setAlpha(v);
+        textView.setAlpha(v);
+        button.setAlpha(v);
+        verifyEmailID.setAlpha(v);
+
+        heading.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        textView.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        button.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        verifyEmailID.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
     }
     public void resetEmail(){
         String resetEmailID = verifyEmailID.getText().toString();

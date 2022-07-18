@@ -81,22 +81,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/Circular" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ButtonClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/close"
+        android:backgroundTint="@color/yellow"
+        android:shadowColor="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="@+id/buttonChange"
         app:layout_constraintEnd_toStartOf="@+id/buttonChange"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonChange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        android:shadowColor="@color/teal_700"
         android:text="@string/change_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"

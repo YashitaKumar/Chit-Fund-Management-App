@@ -36,7 +36,18 @@
     <string name="chit_fund_management_system">CHIT FUND MANAGEMENT SYSTEM</string>
     <string name="crud">CRUD</string>
     <string name="maths">MATHS</string>
-    <string name="lists">LISTS</string>
+    <string name="lists">CUSTOMERS</string>
     <string name="logout">LOGOUT</string>
     <string name="payments">PAYMENTS</string>
+    <string name="close">Close</string>
+    <string name="change_profile">Change Profile</string>
+    <string name="save">Save</string>
+    <string name="todo">TODO</string>
+    <string name="change_Profile_Picture">Change Profile</string>
+    <string name="monthly_plan">Monthly Plan</string>
+    <string name="total_amount_in_fund">Total amount in Fund</string>
+    <string name="late_payment_charges">Late Payment charges</string>
+    <string name="previous_balance">Previous Balance</string>
+    <string name="previous_payments">Previous Payments</string>
+    <string name="taxes">Taxes</string>
 </resources>

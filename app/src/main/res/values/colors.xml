@@ -11,4 +11,5 @@
     <color name="blue">#2579F5</color>
     <color name="modeColor">#F8F3C9</color>
     <color name="primaryColor">#FF9800</color>
+    <color name="shade">#D5000000</color>
 </resources>

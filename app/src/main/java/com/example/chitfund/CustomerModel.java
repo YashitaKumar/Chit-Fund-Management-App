@@ -2,8 +2,8 @@ package com.example.chitfund;
 
 public class CustomerModel {
     String fname,lname,email,image;
-    int slab;
     long mobile;
+    int slab;
 
     CustomerModel()
     {
@@ -54,15 +54,15 @@ public class CustomerModel {
         return String.valueOf(mobile);
     }
 
-    public void setMobile(long mobile) {
-        this.mobile = mobile;
+    public void setMobile(String mobile) {
+        this.mobile = Long.parseLong(mobile);
     }
 
     public String getSlab() {
         return String.valueOf(slab);
     }
 
-    public void setSlab(int slab) {
-        this.slab = slab;
+    public void setSlab(String slab) {
+        this.slab = Integer.parseInt(slab);
     }
 }

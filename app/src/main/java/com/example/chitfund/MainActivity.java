@@ -52,9 +52,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText input_emailId;
     private EditText input_password;
 
+    float v=0;
+
     private Button btn_signIn;
     private TextView btn_signUp;
     private TextView btn_forgotPassword;
+    private TextView heading;
+    private TextView text;
     private SignInButton signInButton;
 
 
@@ -67,6 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        heading = (TextView) findViewById(R.id.Heading_Register);
+        text = (TextView) findViewById(R.id.textView2);
 
         input_emailId=(EditText) findViewById(R.id.login_email);
         input_password=(EditText) findViewById(R.id.inputPasswordLogin);
@@ -89,6 +96,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_signIn.setOnClickListener(this);
         btn_forgotPassword.setOnClickListener(this);
         signInButton.setOnClickListener(this);
+
+        //Animation
+        input_emailId.setTranslationX(800);
+        input_password.setTranslationX(800);
+        btn_signIn.setTranslationX(800);
+        btn_signUp.setTranslationX(800);
+        btn_forgotPassword.setTranslationX(800);
+        text.setTranslationX(800);
+        signInButton.setTranslationX(800);
+
+        heading.setTranslationY(300);
+
+        heading.setAlpha(v);
+        input_emailId.setAlpha(v);
+        input_password.setAlpha(v);
+        btn_signIn.setAlpha(v);
+        btn_signUp.setAlpha(v);
+        btn_forgotPassword.setAlpha(v);
+        text.setAlpha(v);
+        signInButton.setAlpha(v);
+
+        heading.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        input_emailId.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
+        input_password.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        btn_forgotPassword.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        btn_signIn.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(700).start();
+        btn_signUp.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(900).start();
+        text.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(900).start();
+        signInButton.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1100).start();
     }
 
     @Override

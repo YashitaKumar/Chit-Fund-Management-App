@@ -33,10 +33,12 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     private CardView LogoutButton;
     private CardView ChangeProfileImage;
+    private CardView CustomerButton;
     private TextView PhoneNumber;
     private TextView EmailId;
     private TextView UserName;
     private TextView UserId;
+
 
 
     private ShapeableImageView shapeableImageViewProfileImage;
@@ -50,13 +52,15 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     private String userID;
 
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        ChangeProfileImage = findViewById(R.id.CRUD);
+
+        ChangeProfileImage = findViewById(R.id.cardCustomer);
         shapeableImageViewProfileImage = findViewById(R.id.shapeableImageViewProfileImage);
 
 
@@ -66,6 +70,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         UserId = findViewById(R.id.TextViewUserId);
 
         LogoutButton = findViewById(R.id.Logout);
+        CustomerButton = findViewById(R.id.Customers);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -116,6 +122,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         LogoutButton.setOnClickListener(this);
         ChangeProfileImage.setOnClickListener(this);
+        CustomerButton.setOnClickListener(this);
     }
 
     private void UserLogOut() {
@@ -123,7 +130,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         finish();
     }
     private void changeProfile(){
-       startActivity(new Intent(this, ChangeProfile.class));
+        startActivity(new Intent(this, ChangeProfile.class));
+    }
+    private void crudCustomers(){
+        startActivity(new Intent(this, CustomerActivity.class));
     }
 
     @Override
@@ -132,8 +142,11 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case (R.id.Logout):
                 UserLogOut();
                 break;
-            case (R.id.CRUD):
+            case (R.id.cardCustomer):
                 changeProfile();
+                break;
+            case (R.id.Customers):
+                crudCustomers();
                 break;
         }
     }

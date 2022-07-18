@@ -30,7 +30,11 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
     private EditText inputRePassword;
     private Button buttonRegister;
     private TextView buttonSignIn;
+    private TextView textView;
+    private TextView heading;
     private ProgressBar progressBar;
+
+    float v =0;
 
     private FirebaseAuth mAuth;
 
@@ -45,6 +49,8 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
         inputEmailID=(EditText) findViewById(R.id.input_emailId);
         inputPassword=(EditText) findViewById(R.id.input_password);
         inputRePassword=(EditText) findViewById(R.id.input_rePassword);
+        heading = (TextView) findViewById(R.id.Heading_Register);
+        textView = (TextView) findViewById(R.id.plainText);
 
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
 
@@ -55,6 +61,42 @@ public class UserRegistration extends AppCompatActivity implements View.OnClickL
 
         buttonRegister.setOnClickListener(this);
         buttonSignIn.setOnClickListener(this);
+
+        //Animation
+        heading.setTranslationY(300);
+
+        inputFirstName.setTranslationX(800);
+        inputLastName.setTranslationX(800);
+        inputEmailID.setTranslationX(800);
+        inputPhoneNumber.setTranslationX(800);
+        inputPassword.setTranslationX(800);
+        inputRePassword.setTranslationX(800);
+        buttonRegister.setTranslationX(800);
+        textView.setTranslationX(800);
+        buttonSignIn.setTranslationX(800);
+
+        heading.setAlpha(v);
+        inputFirstName.setAlpha(v);
+        inputLastName.setAlpha(v);
+        inputEmailID.setAlpha(v);
+        inputPhoneNumber.setAlpha(v);
+        inputPassword.setAlpha(v);
+        inputRePassword.setAlpha(v);
+        textView.setAlpha(v);
+        buttonSignIn.setAlpha(v);
+        buttonRegister.setAlpha(v);
+
+        heading.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(200).start();
+        inputFirstName.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
+        inputLastName.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        inputEmailID.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(700).start();
+        inputPhoneNumber.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(900).start();
+        inputPassword.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1100).start();
+        inputRePassword.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1300).start();
+        buttonRegister.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1500).start();
+        textView.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1700).start();
+        buttonSignIn.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(1700).start();
+
 
     }
 

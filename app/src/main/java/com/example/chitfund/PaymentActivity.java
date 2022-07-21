@@ -20,9 +20,14 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.razorpay.Checkout;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -33,7 +38,7 @@ import java.util.Map;
 
 public class PaymentActivity extends AppCompatActivity {
 
-    EditText nametxt, upiIdtxt, msgtxt, amttxt, emailtxt,contacttxt;
+    EditText nametxt, upiIdtxt, msgtxt, amttxt;
     String paymentStatus="";
 
     Button paybtn,paybtn_razor;
@@ -48,8 +53,6 @@ public class PaymentActivity extends AppCompatActivity {
         upiIdtxt = findViewById(R.id.edtupiid);
         msgtxt = findViewById(R.id.edtmsg);
         amttxt = findViewById(R.id.edtamt);
-        emailtxt = findViewById(R.id.edtemail);
-        contacttxt = findViewById(R.id.edtcontact);
 
 
         paybtn = findViewById(R.id.btnpay);
@@ -226,9 +229,39 @@ public class PaymentActivity extends AppCompatActivity {
             options.put("currency", "INR");
             options.put("amount", amttxt.getText().toString()+"00");
 
+            final String[] email = new String[1];
+            final String[] contact = new String[1];
+
             JSONObject preFill = new JSONObject();
-            preFill.put("email", emailtxt.getText().toString());
-            preFill.put("contact", contacttxt.getText().toString());
+
+            DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+            DatabaseReference userRef = rootRef.child("Users");
+            userRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot keyId: snapshot.getChildren()) {
+                        email[0] = keyId.child("emailId").getValue(String.class);
+                        contact[0] = keyId.child("phoneNumber").getValue(String.class);
+                        break;
+
+                    }
+                    try {
+                        String emailpay,contactpay;
+                        emailpay=email[0];
+                        contactpay=contact[0];
+                        preFill.put("email", emailpay);
+                        preFill.put("contact", contactpay);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    //Failed to read values
+                    Log.w("UserRef", "Failed to read User Values ",error.toException() );
+                }
+            });
 
             options.put("prefill", preFill);
 

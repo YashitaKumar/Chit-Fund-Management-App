@@ -68,38 +68,7 @@
         android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"/>
-    <EditText
-        android:id="@+id/edtemail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Email ID"
-        android:background="@drawable/edit_text_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtupiid"
-        app:layout_constraintWidth_percent="0.8"
-        app:layout_constraintVertical_bias="0.04"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
-    <EditText
-        android:id="@+id/edtcontact"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Contact Number"
-        android:background="@drawable/edit_text_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtemail"
-        app:layout_constraintWidth_percent="0.8"
-        app:layout_constraintVertical_bias="0.04"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+
     <EditText
         android:id="@+id/edtmsg"
         android:layout_width="0dp"
@@ -109,7 +78,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtcontact"
+        app:layout_constraintTop_toBottomOf="@+id/edtupiid"
         app:layout_constraintWidth_percent="0.8"
         app:layout_constraintVertical_bias="0.04"
         android:paddingLeft="20dp"

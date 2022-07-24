@@ -53,7 +53,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.227"
-                    app:shapeAppearanceOverlay="@style/Circular" />
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/TextViewUserName"

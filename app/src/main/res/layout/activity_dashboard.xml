@@ -8,11 +8,14 @@
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,8 +28,8 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="477dp"
-                    android:layout_height="289dp"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
                     android:layout_marginBottom="32dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +37,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/top_background" />
+                    app:srcCompat="@drawable/top_background"
+                    android:contentDescription="@string/mainimageview" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/shapeableImageViewProfileImage"
@@ -50,14 +54,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.227"
-                    app:shapeAppearanceOverlay="@style/Circular" />
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/TextViewUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Vineet Mishra"
+                    android:text="@string/vineet_mishra"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -73,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="UID: 27839384"
+                    android:text="@string/uid_27839384"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
@@ -102,7 +107,7 @@
                     <LinearLayout
                         android:layout_width="355dp"
                         android:layout_height="57dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -111,11 +116,11 @@
                             android:id="@+id/TextViewUserPhoneNumber"
                             android:layout_width="10dp"
                             android:layout_height="57dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Phone Number: 9811898863"
-                            android:textColor="@color/black"
+                            android:text="@string/phone_number_9811898863"
+                            android:textColor="@android:color/darker_gray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -126,8 +131,8 @@
                             android:layout_height="57dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Email ID: Vineet1456@gmail.com"
-                            android:textColor="@color/black"
+                            android:text="@string/email_id_vineet1456_gmail_com"
+                            android:textColor="@android:color/darker_gray"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -167,13 +172,13 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
+                            android:contentDescription="@string/edit_profile"
                             android:src="@drawable/ic_crud" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EDIT PROFILE"
+                            android:text="@string/edit_profile"
                             android:textAlignment="center"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -206,7 +211,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
+                            android:contentDescription="@string/maths"
                             android:src="@drawable/ic_maths" />
 
                         <TextView
@@ -243,8 +248,9 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
-                            android:src="@drawable/ic_list" />
+                            android:contentDescription="@string/customers"
+                            android:src="@drawable/ic_list"
+                            tools:ignore="ImageContrastCheck" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -280,7 +286,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
+                            android:contentDescription="@string/payments"
                             android:src="@drawable/ic_payment" />
 
                         <TextView
@@ -317,13 +323,13 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
+                            android:contentDescription="@string/ivoices"
                             android:src="@drawable/ic_invoice" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="IVOICES"
+                            android:text="@string/ivoices"
                             android:textAlignment="center"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -354,7 +360,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:contentDescription="TODO"
+                            android:contentDescription="@string/log_out"
                             android:src="@drawable/ic_logout" />
 
                         <TextView
@@ -372,3 +378,4 @@
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

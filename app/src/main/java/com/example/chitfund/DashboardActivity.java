@@ -127,6 +127,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     private void UserLogOut() {
         mAuth.signOut();
+        startActivity(new Intent(DashboardActivity.this,MainActivity.class));
         finish();
     }
     private void changeProfile(){

@@ -54,7 +54,7 @@ public class ChangeProfile extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_profile_picture);
+        setContentView(R.layout.activity_change_profile);
 
         //Defining the variables
         mAuth = FirebaseAuth.getInstance();

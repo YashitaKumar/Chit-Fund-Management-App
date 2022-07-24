@@ -58,4 +58,17 @@
     <string name="title_activity_list_of_chits">ListOfChitsActivity</string>
     <string name="submit">Submit</string>
     <string name="enter_the_full_valid_phone_number">Enter the full valid phone number</string>
+    <string name="email_id">Email ID</string>
+    <string name="welcome_to_chit_fund_management">Welcome To Chit Fund Management</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="vineet_mishra">Vineet Mishra</string>
+    <string name="uid_27839384">UID: 27839384</string>
+    <string name="phone_number_9811898863">Phone Number: 9811898863</string>
+    <string name="email_id_vineet1456_gmail_com">Email ID: Vineet1456@gmail.com</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="ivoices">IVOICES</string>
+    <string name="customers">Customers</string>
+    <string name="mainimageview">MainImageView</string>
+    <string name="indiaRupeePhoto">India Rupee Photo</string>
 </resources>

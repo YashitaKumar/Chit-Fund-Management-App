@@ -5,65 +5,74 @@
       <map>
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/btn_bg.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_edit_text.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_mail.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_person.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_phone.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_security.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/edit_text_bg.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_crud.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_edit.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_google_background.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_invoice.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_list.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_logout.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_mail.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_mail_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_maths.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_payment.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_person.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_person_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_phone.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_phone_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_security.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_security_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/input_bg.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/rounded.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/top_background.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/vie_bg.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_add.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_billprevious.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_change_profile.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_change_profile_picture.xml" value="0.2" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_customer.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_home.xml" value="0.2359375" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_lists.xml" value="0.264" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
-        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_user_registration.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_user_registration.xml" value="0.2" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_verify_phone_number.xml" value="0.264" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/amount_bill.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/bill_paynow.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/customer_item.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/item_image.xml" value="0.4" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/newui.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/note_item.xml" value="0.264" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/rough.xml" value="0.25" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/update_popup.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_google.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_google_round.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2465" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/btn_bg.xml" value="0.19722222222222222" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/edit_text_bg.xml" value="0.1065" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_crud.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_mail.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_person.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_phone.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_security.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/input_bg.xml" value="0.20052083333333334" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/rounded.xml" value="0.1065" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/top_background.xml" value="0.1065" />
-        <entry key="..\:/ChitFund/app/src/main/res/drawable/vie_bg.xml" value="0.1065" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_add.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_change_profile.xml" value="0.22" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_customer.xml" value="0.25" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_lists.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login.xml" value="0.15353260869565216" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_password.xml" value="0.22" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_reset_password.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_user_registration.xml" value="0.184375" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_verify_email.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/amount_bill.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/bill_paynow.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/content_login.xml" value="0.15353260869565216" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/customer_item.xml" value="0.22296395193591456" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_second.xml" value="0.15353260869565216" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/item_image.xml" value="0.25" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/newui.xml" value="0.18" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/note_item.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/update_popup.xml" value="0.2" />
       </map>
     </option>
   </component>

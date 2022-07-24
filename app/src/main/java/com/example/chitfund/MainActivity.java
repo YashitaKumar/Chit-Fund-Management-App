@@ -296,7 +296,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                break;
            case (R.id.btn_SignUp):
                startActivity(new Intent(this,UserRegistration.class));
-               finish();
                break;
            case (R.id.btnLogin):
                SignIn();

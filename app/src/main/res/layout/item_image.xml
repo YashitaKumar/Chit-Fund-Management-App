@@ -60,29 +60,54 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:weightSum="3">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone No: "
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/TextViewUserPhoneNumber"
-                        android:layout_width="1dp"
-                        android:layout_height="57dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Phone No.: 9811898863"
+                        android:text="9811898863"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
+                    </LinearLayout>
 
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email ID"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
                     <TextView
                         android:id="@+id/TextViewUserEmailId"
-                        android:layout_width="98dp"
-                        android:layout_height="57dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Email ID: Vineet1456@gmail.com"
+                        android:text="Vineet1456@gmail.com"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -97,7 +122,7 @@
         android:layout_centerHorizontal="true"
         android:elevation="15dp"
         android:padding="5dp"
-        android:src="@drawable/person"
+        android:src="@drawable/ic_person"
         app:shapeAppearanceOverlay="@style/Circular" />
 
 </RelativeLayout>

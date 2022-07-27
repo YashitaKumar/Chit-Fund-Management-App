@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,13 +19,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.view.Change;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -41,6 +40,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private TextView UserName;
     private TextView UserId;
 
+    private Button btn_more;
+    private Button btn_back;
 
 
     private ShapeableImageView shapeableImageViewProfileImage;
@@ -76,6 +77,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         PaymentButton = findViewById(R.id.payments);
         InvoiceButton = findViewById(R.id.Invoices);
 
+        btn_more = findViewById(R.id.btn_more);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -95,8 +98,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
 
         emailId= mAuth.getCurrentUser().getEmail().toString().trim();
-        EmailId.setText("Email ID: "+ emailId);
-        UserId.setText("UID: "+ mAuth.getCurrentUser().getUid().toString().trim());
+        EmailId.setText(emailId);
+        UserId.setText("UID: "+ mAuth.getCurrentUser().getUid().toString().trim().substring(0,15));
 
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference userRef = rootRef.child("Users");
@@ -114,7 +117,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                     }
                 }
                 UserName.setText(fName+" "+lName);
-                PhoneNumber.setText("Phone No.: "+phoneNo);
+                PhoneNumber.setText(phoneNo);
             }
 
             @Override
@@ -129,6 +132,29 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         CustomerButton.setOnClickListener(this);
         PaymentButton.setOnClickListener(this);
         InvoiceButton.setOnClickListener(this);
+
+        //Dashboard Know More
+
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(DashboardActivity.this);
+        final View rules_popup = getLayoutInflater().inflate(R.layout.rules,null);
+        btn_back = rules_popup.findViewById(R.id.backbtn);
+        dialogBuilder.setView(rules_popup);
+        AlertDialog dialog = dialogBuilder.create();
+
+        btn_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.show();
+            }
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
     }
 
     private void UserLogOut() {
@@ -168,5 +194,6 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 break;
         }
     }
+
 
 }

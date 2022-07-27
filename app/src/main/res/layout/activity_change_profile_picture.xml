@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ChangeProfile">
 
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        android:background="@drawable/try_bg"
+        android:padding="10dp"/>
 
     <EditText
         android:id="@+id/editTextPhoneNumber"
@@ -71,35 +88,45 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
         android:elevation="15dp"
         android:padding="5dp"
         android:src="@drawable/person"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
         app:shapeAppearanceOverlay="@style/Circular" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ButtonClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/newbg"
+        android:padding="10dp"
         android:text="@string/close"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonChange"
-        app:layout_constraintEnd_toStartOf="@+id/buttonChange"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintVertical_bias="0.25"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonChange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/newbg"
+        android:padding="10dp"
         android:text="@string/change_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ButtonClose"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintHorizontal_bias="2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

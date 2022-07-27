@@ -80,7 +80,6 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
     }
-
     private void PayUsingUpi(String name,String upiId,String amt,String msg){
         Uri uri = new Uri.Builder()
                 .scheme("upi").authority("pay")

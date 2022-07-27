@@ -31,24 +31,33 @@
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_google_round.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2465" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2465" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/bg_heading.xml" value="0.1125" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/bg_invoice_item.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/bg_right.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/btn_bg.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/edit_text_bg.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_crud.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_mail.xml" value="0.19722222222222222" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_maths.xml" value="0.1125" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_person.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_phone.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/ic_security.xml" value="0.19722222222222222" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/input_bg.xml" value="0.20052083333333334" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/invoice_bg.xml" value="0.1125" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/new_bg.xml" value="0.1125" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/newbg.xml" value="0.1125" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/rounded.xml" value="0.1065" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/slider_btn_bg.xml" value="0.1065" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/sliderone_bg.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/top_background.xml" value="0.1065" />
+        <entry key="..\:/ChitFund/app/src/main/res/drawable/try_bg.xml" value="0.1125" />
         <entry key="..\:/ChitFund/app/src/main/res/drawable/vie_bg.xml" value="0.1065" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_add.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_change_profile.xml" value="0.22" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_change_profile_picture.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_customer.xml" value="0.25" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_invoice.xml" value="0.12047101449275362" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_invoice.xml" value="0.18" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_lists.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login.xml" value="0.15353260869565216" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
@@ -64,10 +73,12 @@
         <entry key="..\:/ChitFund/app/src/main/res/layout/customer_item.xml" value="0.22296395193591456" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_second.xml" value="0.15353260869565216" />
-        <entry key="..\:/ChitFund/app/src/main/res/layout/invoice_item.xml" value="0.25" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/invoice_item.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/item_image.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/newui.xml" value="0.18" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/note_item.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/rules.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/temp.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/update_popup.xml" value="0.2" />
       </map>
     </option>

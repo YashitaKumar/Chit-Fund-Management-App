@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MathActivity">
+
+    <EditText
+        android:id="@+id/editTextNumberAmount"
+        android:layout_width="324dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_ic_edit_text"
+        android:drawableEnd="@drawable/custom_ic_money"
+        android:ems="10"
+        android:hint="@string/total_amount_for_one_month"
+        android:inputType="number"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumberCustomers"
+        android:layout_width="324dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_ic_edit_text"
+        android:drawableEnd="@drawable/custom_ic_person"
+        android:ems="10"
+        android:hint="@string/no_of_customers_in_the_chit"
+        android:inputType="number"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberAmount"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberAmount"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textViewSlabAmountPerMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSubmitMath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/submit"
+        android:textColor="@android:color/secondary_text_light"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSlabAmountPerMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberCustomers"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

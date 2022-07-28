@@ -36,6 +36,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private CardView CustomerButton;
     private CardView PaymentButton;
     private CardView InvoiceButton;
+    private CardView MathButton;
     private TextView PhoneNumber;
     private TextView EmailId;
     private TextView UserName;
@@ -75,6 +76,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         CustomerButton = findViewById(R.id.Customers);
         PaymentButton = findViewById(R.id.payments);
         InvoiceButton = findViewById(R.id.Invoices);
+        MathButton = findViewById(R.id.Maths);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -129,6 +131,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         CustomerButton.setOnClickListener(this);
         PaymentButton.setOnClickListener(this);
         InvoiceButton.setOnClickListener(this);
+        MathButton.setOnClickListener(this);
     }
 
     private void UserLogOut() {
@@ -148,7 +151,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private void invoices(){
         startActivity(new Intent(this, InvoiceActivity.class));
     }
-
+    private void maths() {
+        startActivity(new Intent(this, MathActivity.class));
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -166,6 +171,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 break;
             case (R.id.Invoices):
                 invoices();
+                break;
+            case (R.id.Maths):
+                maths();
                 break;
         }
     }

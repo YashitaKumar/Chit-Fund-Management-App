@@ -39,6 +39,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DataSnapshot;
@@ -187,8 +188,76 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 else{
+                    String errorCode = ((FirebaseAuthException) task.getException()).getErrorCode();
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(MainActivity.this, "Failed to Login! Please check your credentials.", Toast.LENGTH_SHORT).show();
+
+                    switch (errorCode) {
+
+                        case "ERROR_INVALID_CUSTOM_TOKEN":
+                            Toast.makeText(MainActivity.this, "The custom token format is incorrect. Please check the documentation.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_CUSTOM_TOKEN_MISMATCH":
+                            Toast.makeText(MainActivity.this, "The custom token corresponds to a different audience.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_INVALID_CREDENTIAL":
+                            Toast.makeText(MainActivity.this, "The supplied auth credential is malformed or has expired.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_INVALID_EMAIL":
+                            Toast.makeText(MainActivity.this, "The email address is badly formatted.", Toast.LENGTH_LONG).show();
+                            input_emailId.setError("The email address is badly formatted.");
+                            input_emailId.requestFocus();
+                            break;
+
+                        case "ERROR_USER_MISMATCH":
+                            Toast.makeText(MainActivity.this, "The supplied credentials do not correspond to the previously signed in user.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_REQUIRES_RECENT_LOGIN":
+                            Toast.makeText(MainActivity.this, "This operation is sensitive and requires recent authentication. Log in again before retrying this request.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL":
+                            Toast.makeText(MainActivity.this, "An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_EMAIL_ALREADY_IN_USE":
+                            Toast.makeText(MainActivity.this, "The email address is already in use by another account.   ", Toast.LENGTH_LONG).show();
+                            input_emailId.setError("The email address is already in use by another account.");
+                            input_emailId.requestFocus();
+                            break;
+
+                        case "ERROR_CREDENTIAL_ALREADY_IN_USE":
+                            Toast.makeText(MainActivity.this, "This credential is already associated with a different user account.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_USER_DISABLED":
+                            Toast.makeText(MainActivity.this, "The user account has been disabled by an administrator.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_USER_TOKEN_EXPIRED":
+                            Toast.makeText(MainActivity.this, "The user\\'s credential is no longer valid. The user must sign in again.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_USER_NOT_FOUND":
+                            Toast.makeText(MainActivity.this, "There is no user record corresponding to this identifier. The user may have been deleted.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_INVALID_USER_TOKEN":
+                            Toast.makeText(MainActivity.this, "The user\\'s credential is no longer valid. The user must sign in again.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case "ERROR_OPERATION_NOT_ALLOWED":
+                            Toast.makeText(MainActivity.this, "This operation is not allowed. You must enable this service in the console.", Toast.LENGTH_LONG).show();
+                            break;
+
+                        default:
+                            Toast.makeText(MainActivity.this, errorCode, Toast.LENGTH_SHORT).show();
+
+
+                    }
                 }
             }
         });

@@ -7,6 +7,7 @@
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/btn_bg.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_edit_text.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_mail.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_money.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_person.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_phone.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/custom_ic_security.xml" value="0.232" />
@@ -22,6 +23,8 @@
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_mail.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_mail_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_maths.xml" value="0.121" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_money.xml" value="0.232" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_money_focused.xml" value="0.232" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_payment.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_person.xml" value="0.121" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/drawable/ic_person_focused.xml" value="0.232" />
@@ -43,6 +46,7 @@
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_lists.xml" value="0.264" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_login_activity.xml" value="0.2" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_math.xml" value="0.4" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_user_registration.xml" value="0.2" />
         <entry key="..\:/BML Education/Chit-Fund-Management-App/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />

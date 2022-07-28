@@ -51,9 +51,9 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
 
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
-                .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                .placeholder(R.drawable.ic_person)
                 .circleCrop()
-                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .error(R.drawable.ic_person)
                 .into(holder.img);
 
         holder.btnEdit.setOnClickListener(new OnClickListener() {

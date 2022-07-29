@@ -71,7 +71,7 @@
     <string name="customers">Customers</string>
     <string name="mainimageview">MainImageView</string>
     <string name="indiaRupeePhoto">India Rupee Photo</string>
-    <string name="total_amount_for_one_month">Total amount for one month</string>
+    <string name="total_amount_for_one_month">Amount collected for one month</string>
     <string name="no_of_customers_in_the_chit">No. of customers in the Chit</string>
     <string name="select_the_month">Select the month</string>
 </resources>

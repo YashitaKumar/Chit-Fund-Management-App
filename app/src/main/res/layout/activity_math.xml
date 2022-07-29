@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MathActivity">
 
-    <EditText
+    <com.aldoapps.autoformatedittext.AutoFormatEditText
         android:id="@+id/editTextNumberAmount"
         android:layout_width="324dp"
         android:layout_height="56dp"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
+    <com.aldoapps.autoformatedittext.AutoFormatEditText
         android:id="@+id/editTextNumberCustomers"
         android:layout_width="324dp"
         android:layout_height="56dp"

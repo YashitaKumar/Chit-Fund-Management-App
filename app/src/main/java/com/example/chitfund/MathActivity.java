@@ -45,8 +45,8 @@ public class MathActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void DoTheMath(){
-        String totalAmount=editTextTotalAmount.getText().toString();
-        String noOfCustomers=editTextNumberOfCustomers.getText().toString();
+        String totalAmount=editTextTotalAmount.getText().toString().replace(",","");
+        String noOfCustomers=editTextNumberOfCustomers.getText().toString().replace(",","");
         if(TextUtils.isEmpty(totalAmount)){
             editTextTotalAmount.setError("Enter total amount");
             editTextTotalAmount.requestFocus();

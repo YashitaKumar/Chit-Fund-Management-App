@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChitFund">
         <activity
+            android:name=".MathActivity"
+            android:exported="false" />
+        <activity
             android:name=".InvoiceActivity"
             android:exported="false" />
         <activity
@@ -63,6 +66,7 @@
             android:theme="@style/CheckoutTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <data
                     android:host="rzp.io"
                     android:scheme="io.rzp" />
@@ -80,9 +84,6 @@
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
             android:value="true" />
-
     </application>
-
-
 
 </manifest>

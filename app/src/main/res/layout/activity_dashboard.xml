@@ -12,8 +12,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +34,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/top_background" />
+                    app:srcCompat="@drawable/top_background"
+                    android:contentDescription="@string/mainimageview" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/shapeableImageViewProfileImage"
@@ -51,14 +51,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.227"
-                    app:shapeAppearanceOverlay="@style/Circular" />
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:id="@+id/TextViewUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Vineet Mishra"
+                    android:text="@string/vineet_mishra"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -74,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="UID: 27839384"
+                    android:text="@string/uid_27839384"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
@@ -103,7 +104,7 @@
                     <LinearLayout
                         android:layout_width="355dp"
                         android:layout_height="57dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -251,7 +252,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EDIT PROFILE"
+                            android:text="@string/edit_profile"
                             android:textAlignment="center"
                             android:textSize="15sp"
                             android:textStyle="bold"
@@ -460,3 +461,4 @@
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

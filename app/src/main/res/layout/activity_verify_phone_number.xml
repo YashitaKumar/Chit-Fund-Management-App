@@ -6,46 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".verifyPhoneNumberActivity">
 
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="272dp"
-        android:layout_height="48dp"
-        android:autofillHints=""
-        android:drawableEnd="@drawable/ic_phone"
-        android:ems="10"
-        android:hint="@string/phone_number"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/enter_your_registered_email_id_to_reset_the_password"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/heading_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_Password_heading"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
+        app:layout_constraintVertical_bias="0.309" />
 
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
+        android:background="@drawable/custom_ic_edit_text"
+        android:drawableEnd="@drawable/custom_ic_phone"
+        android:ems="10"
+        android:hint="@string/phone_number"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""
+        android:inputType="phone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSubmit"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/submit"
+        android:textColor="@android:color/secondary_text_light"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        app:layout_constraintVertical_bias="0.051" />
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="260dp"
-        android:layout_height="84dp"
-        android:gravity="center"
-        android:text="@string/enter_the_full_valid_phone_number"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928" />
 </androidx.constraintlayout.widget.ConstraintLayout>

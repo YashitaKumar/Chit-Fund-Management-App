@@ -20,19 +20,21 @@
         app:layout_constraintHeight_percent=".45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0"
+        android:contentDescription="@string/indiaRupeePhoto" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".7"
         android:background="@drawable/vie_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/Heading_Register"
@@ -67,23 +69,23 @@
             android:id="@+id/verify_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:hint="Enter Email ID"
-            android:drawableLeft="@drawable/ic_security"
-            android:paddingLeft="20dp"
-            android:paddingRight="15dp"
+            android:autofillHints=""
+            android:background="@drawable/custom_ic_edit_text"
+            android:drawableEnd="@drawable/custom_ic_mail"
+            android:ems="10"
+            android:hint="@string/email_id"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
             android:paddingTop="10dp"
+            android:paddingEnd="15dp"
             android:paddingBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias=".5"
-            app:layout_constraintVertical_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintWidth_percent="0.8"
-            android:drawableEnd="@drawable/ic_mail"
-            android:inputType="textEmailAddress"
-            android:ems="10"/>
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintWidth_percent="0.8" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_resetPassword"
@@ -99,9 +101,6 @@
             app:layout_constraintTop_toBottomOf="@+id/verify_email" />
 
 
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -113,13 +112,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.2"
+        android:contentDescription="@string/chit_fund_management_system" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Welcome To Chit Fund Management"
+        android:text="@string/welcome_to_chit_fund_management"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"

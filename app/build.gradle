@@ -51,7 +51,7 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.google.firebase:firebase-storage:20.0.1'
-    implementation 'com.google.firebase:firebase-firestore:24.2.0'
+    implementation 'com.google.firebase:firebase-firestore:24.2.1'
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     testImplementation 'junit:junit:4.+'
     implementation 'com.razorpay:checkout:1.6.19'

@@ -1,7 +1,8 @@
 package com.example.chitfund;
 
 public class CustomerModel {
-    String fname,lname,email,image;
+
+    String fname,lname,email,image,UID;
     long mobile;
     int slab;
 
@@ -9,13 +10,14 @@ public class CustomerModel {
     {
 
     }
-    public CustomerModel(String fname, String lname, String email, String image, long mobile, int slab) {
+    public CustomerModel(String fname, String lname, String email, String image, String UID, long mobile, int slab) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
         this.image = image;
         this.mobile = mobile;
         this.slab = slab;
+        this.UID = UID;
     }
 
     public String getFname() {
@@ -64,5 +66,12 @@ public class CustomerModel {
 
     public void setSlab(String slab) {
         this.slab = Integer.parseInt(slab);
+    }
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 }

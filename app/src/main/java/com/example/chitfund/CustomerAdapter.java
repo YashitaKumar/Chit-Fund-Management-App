@@ -48,6 +48,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
        holder.email.setText(model.getEmail());
        holder.slab.setText(model.getSlab());
        holder.mobile.setText(model.getMobile());
+       holder.UID.setText(model.getUID());
 
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
@@ -74,6 +75,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
                 EditText mobileText = view1.findViewById(R.id.txtmobile);
                 EditText slabText = view1.findViewById(R.id.txtslab);
                 EditText imageText = view1.findViewById(R.id.txtimage);
+                EditText uidText = view1.findViewById(R.id.txtuid);
 
                 Button btnUpdate = view1.findViewById(R.id.btnUpdate);
 
@@ -82,6 +84,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
                 emailText.setText(model.getEmail());
                 mobileText.setText(model.getMobile());
                 slabText.setText(model.getSlab());
+                uidText.setText(model.getUID());
                 imageText.setText(model.getImage());
 
                 dialogPlus.show();
@@ -96,6 +99,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
                         map.put("mobile",mobileText.getText().toString());
                         map.put("slab",slabText.getText().toString());
                         map.put("image",imageText.getText().toString());
+                        map.put("uid",uidText.getText().toString());
 
                         FirebaseAuth mAuth;
                         mAuth= FirebaseAuth.getInstance();
@@ -162,7 +166,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
     class myViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView fname,lname,email,mobile,slab;
+        TextView fname,lname,email,mobile,slab,UID;
 
         Button btnEdit,btnDelete;
 
@@ -175,6 +179,7 @@ public class CustomerAdapter extends FirebaseRecyclerAdapter<CustomerModel, Cust
             email = (TextView) itemView.findViewById(R.id.emailtext);
             mobile = (TextView) itemView.findViewById(R.id.mobiletext);
             slab = (TextView) itemView.findViewById(R.id.slabtext);
+            UID = (TextView) itemView.findViewById(R.id.UIDtext);
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);

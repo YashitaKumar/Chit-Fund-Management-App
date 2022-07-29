@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="800dp"
-        android:layout_height="210dp"
+        android:layout_height="250dp"
         android:layout_margin="5dp"
         android:layout_marginBottom="10dp">
 
@@ -89,10 +89,27 @@
                     app:layout_constraintHorizontal_bias="0.05"/>
 
                 <TextView
-                    android:id="@+id/emailtext"
+                    android:id="@+id/UIDtext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/fnametext"
+                    android:layout_toRightOf="@+id/img1"
+                    android:gravity="center"
+                    android:text="User ID"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/fnametext"
+                    app:layout_constraintTop_toBottomOf="@+id/fnametext"
+                    app:layout_constraintVertical_bias="0.0"/>
+
+                <TextView
+                    android:id="@+id/emailtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UIDtext"
                     android:layout_toRightOf="@+id/img1"
                     android:gravity="center"
                     android:text="Email"
@@ -101,8 +118,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
-                    app:layout_constraintStart_toStartOf="@+id/fnametext"
-                    app:layout_constraintTop_toBottomOf="@+id/fnametext"
+                    app:layout_constraintStart_toStartOf="@+id/UIDtext"
+                    app:layout_constraintTop_toBottomOf="@+id/UIDtext"
                     app:layout_constraintVertical_bias="0.0"/>
 
                 <TextView

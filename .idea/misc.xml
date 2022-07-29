@@ -55,6 +55,7 @@
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_add.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_change_profile.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_change_profile_picture.xml" value="0.22" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/activity_chits.xml" value="0.12047101449275362" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_customer.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_invoice.xml" value="0.18" />
@@ -69,6 +70,7 @@
         <entry key="..\:/ChitFund/app/src/main/res/layout/activity_verify_email.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/amount_bill.xml" value="0.2" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/bill_paynow.xml" value="0.2" />
+        <entry key="..\:/ChitFund/app/src/main/res/layout/chit_item.xml" value="0.22" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/content_login.xml" value="0.15353260869565216" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/customer_item.xml" value="0.22296395193591456" />
         <entry key="..\:/ChitFund/app/src/main/res/layout/fragment_first.xml" value="0.25" />

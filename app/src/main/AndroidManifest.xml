@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChitFund">
         <activity
+            android:name=".ChitsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MathActivity"
             android:exported="false" />
         <activity

@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (user.isEmailVerified()){
                         startActivity(new Intent(MainActivity.this, DashboardActivity.class));
                         Toast.makeText(MainActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
-                        finish();
+                        return;
                     }
                     else {
                         user.sendEmailVerification();
@@ -309,18 +309,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     for(DataSnapshot data: snapshot.getChildren()){
-                                        Boolean truth = data.child("phoneNumber").exists();
+//                                        Boolean truth = data.child("phoneNumber").exists();
                                         if (data.getKey().equals("phoneNumber")) {
                                             phoneNumber = data.getValue(String.class);
                                             if(!phoneNumber.equals("123")){
                                                 startActivity(new Intent(MainActivity.this, DashboardActivity.class));
-                                                finish();
                                                 return;
                                             }
-                                            Log.d("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
-                                        } else {
-                                            Log.w("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
+//                                            Log.d("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
                                         }
+//                                        else {
+//                                            Log.w("PhoneNumberThing", "Phone doesnot exits yet"+ (new Boolean(data.child("phoneNumber").exists()).toString()) +data.getValue(String.class));
+//                                        }
                                     }
                                     Log.d("PhoneNumberThing",phoneNumber);
                                     FirebaseUser fUser = mAuth.getCurrentUser();
@@ -332,7 +332,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                         public void onSuccess(Void unused) {
                                             Log.d("SignInActivity", "signInWithCredential:success");
                                             startActivity(new Intent(MainActivity.this, verifyPhoneNumberActivity.class));
-                                            finish();
+                                            return;
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override

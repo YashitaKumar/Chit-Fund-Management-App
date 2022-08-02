@@ -31,6 +31,9 @@
             android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity
+            android:name=".verifyPhoneNumberActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ChangeProfile"
             android:exported="false" />
         <activity

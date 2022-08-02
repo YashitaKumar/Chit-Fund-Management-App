@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="180dp"
         android:layout_margin="5dp">
 
         <RelativeLayout
@@ -56,7 +56,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment Made To :"
+                    android:text="Chit ID :"
                     android:textSize="17sp"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -67,7 +67,7 @@
                     app:layout_constraintHorizontal_bias="0.2"/>
 
                 <TextView
-                    android:id="@+id/PayeeName"
+                    android:id="@+id/chitID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
@@ -85,7 +85,7 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status :"
+                    android:text="Slab Amount :"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -95,16 +95,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/status"
+                    android:id="@+id/slab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status Info"
+                    android:text="Slab"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView7"
-                    app:layout_constraintTop_toBottomOf="@+id/PayeeName"
+                    app:layout_constraintTop_toBottomOf="@+id/chitID"
                     app:layout_constraintVertical_bias="0.05"
                     app:layout_constraintHorizontal_bias="0.05"
                     android:textColor="@color/black"/>
@@ -112,7 +112,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email ID :"
+                    android:text="Monthly Payment :"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -122,16 +122,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView7"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/upiid"
+                    android:id="@+id/monthly"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email ID"
+                    android:text="Monthly"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView8"
-                    app:layout_constraintTop_toBottomOf="@+id/status"
+                    app:layout_constraintTop_toBottomOf="@+id/slab"
                     app:layout_constraintVertical_bias="0.05"
                     app:layout_constraintHorizontal_bias="0.05"
                     android:textColor="@color/black"/>
@@ -139,7 +139,7 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Amount :"
+                    android:text="Timeline :"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -148,25 +148,26 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView8"
                     android:textColor="@color/black"/>
+
                 <TextView
-                    android:id="@+id/amount"
+                    android:id="@+id/timeline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Amount Value"
+                    android:text="Duration"
+                    android:textColor="@color/black"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView8"
-                    app:layout_constraintTop_toBottomOf="@+id/upiid"
-                    app:layout_constraintVertical_bias="0.05"
-                    app:layout_constraintHorizontal_bias="0.07"
-                    android:textColor="@color/black"/>
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toEndOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/monthly"
+                    app:layout_constraintVertical_bias="0.05" />
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Note :"
+                    android:text="Start Date :"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -176,16 +177,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView9"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/paynote"
+                    android:id="@+id/startdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Note Message"
+                    android:text="Start Date"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView10"
-                    app:layout_constraintTop_toBottomOf="@+id/amount"
+                    app:layout_constraintTop_toBottomOf="@+id/timeline"
                     app:layout_constraintVertical_bias="0.05"
                     app:layout_constraintHorizontal_bias="0.05"
                     android:textColor="@color/black"/>
@@ -193,7 +194,7 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date :"
+                    android:text="Payment Date :"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -203,46 +204,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView10"
                     android:textColor="@color/black"/>
                 <TextView
-                    android:id="@+id/paydate"
+                    android:id="@+id/duedate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment Date"
+                    android:text="Due Date"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView11"
-                    app:layout_constraintTop_toBottomOf="@+id/paynote"
+                    app:layout_constraintTop_toBottomOf="@+id/startdate"
                     app:layout_constraintVertical_bias="0.05"
                     app:layout_constraintHorizontal_bias="0.05"
                     android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Time :"
-                    android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
-                    app:layout_constraintVertical_bias="0.05"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/paytime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Payment Time"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView11"
-                    app:layout_constraintTop_toBottomOf="@+id/paydate"
-                    app:layout_constraintVertical_bias="0.05"
-                    app:layout_constraintHorizontal_bias="0.05"
-                    android:textColor="@color/black"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

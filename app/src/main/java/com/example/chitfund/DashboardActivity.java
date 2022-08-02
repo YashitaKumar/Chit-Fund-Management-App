@@ -36,6 +36,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private CardView PaymentButton;
     private CardView InvoiceButton;
     private CardView MathButton;
+    private CardView ChitsButton;
+
     private TextView PhoneNumber;
     private TextView EmailId;
     private TextView UserName;
@@ -78,6 +80,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         PaymentButton = findViewById(R.id.payments);
         InvoiceButton = findViewById(R.id.Invoices);
         MathButton = findViewById(R.id.Maths);
+        ChitsButton = findViewById(R.id.Chits);
 
         btn_more = findViewById(R.id.btn_more);
 
@@ -135,6 +138,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         PaymentButton.setOnClickListener(this);
         InvoiceButton.setOnClickListener(this);
         MathButton.setOnClickListener(this);
+        ChitsButton.setOnClickListener(this);
 
         //Dashboard Know More
 
@@ -180,6 +184,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private void maths() {
         startActivity(new Intent(this, MathActivity.class));
     }
+    private void chits() {
+        startActivity(new Intent(this, ChitsActivity.class));
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -200,6 +207,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 break;
             case (R.id.Maths):
                 maths();
+                break;
+            case (R.id.Chits):
+                chits();
                 break;
         }
     }
